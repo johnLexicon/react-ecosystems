@@ -4,7 +4,7 @@ export const todos = (state = [], action) => {
   switch (type) {
     case CREATE_TODO: {
       const { text } = payload
-      return state.concat({ text, completed: false })
+      return state.concat({ id: String(Date.now()), text, completed: false })
     }
     case REMOVE_TODO: {
       const { id } = payload
