@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
-import { removeTodo, completeTodo } from './actions'
-import { loadTodos, displayAlert } from './thunks'
+import { completeTodo } from './actions'
+import { loadTodos, removeTodoRequest, displayAlert } from './thunks'
 import NewTodoForm from './NewTodoForm'
 import TodoItem from './TodoItem'
 
@@ -31,7 +31,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => ({
   startLoadingTodos: () => dispatch(loadTodos()),
-  onRemovePressed: (id) => dispatch(removeTodo(id)),
+  onRemovePressed: (id) => dispatch(removeTodoRequest(id)),
   onCompletePressed: (id) => dispatch(completeTodo(id)),
   onDisplayAlertClicked: () => dispatch(displayAlert()),
 })
