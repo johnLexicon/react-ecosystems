@@ -3,9 +3,9 @@ import React from 'react'
 const TodoItem = ({ todo, onRemovePressed, onCompletePressed }) => {
   return (
     <div className="todo-item-container">
-      <h3 className={todo.completed ? 'is-completed' : ''}>{todo.text}</h3>
+      <h3 className={todo.isCompleted ? 'is-completed' : ''}>{todo.text}</h3>
       <div className="button-container">
-        {!todo.completed && (
+        {!todo.isCompleted && (
           <button className="completed-button" onClick={() => onCompletePressed(todo.id)}>
             Mark as completed
           </button>

@@ -11,9 +11,9 @@ export const removeTodo = (todo) => ({
 })
 
 export const COMPLETE_TODO = 'COMPLETE_TODO'
-export const completeTodo = (id) => ({
+export const completeTodo = (todo) => ({
   type: COMPLETE_TODO,
-  payload: { id },
+  payload: { todo },
 })
 
 export const LOAD_TODOS_IN_PROGRESS = 'LOAD_TODOS_IN_PROGRESS'
